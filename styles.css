@@ -1,0 +1,236 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+.header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.25rem;
+    margin: 20px 0;
+}
+
+.header .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Introduction Section */
+.introduction {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.introduction h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.image-grid-intro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 40px;
+    margin-right: 40px;
+    gap: 100px;
+}
+
+/* Image Grid */
+.image-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* cursor: pointer; */
+}
+
+.image-item-intro img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Highlighted Selected Image */
+.image-item-intro.selected img {
+    border: 4px solid #ff6347; /* Change the color to your preference */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for emphasis */
+}
+
+/* Services Section */
+.services {
+    background-color: #f5f5f5;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services p {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* Floating Button */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6347; /* Button color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.floating-button:hover {
+    background-color: #e55347; /* Hover color */
+}
+
+
+
+/* Responsive Background Images */
+.header {
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .header {
+        background-image: url('thumbs/header-16by9.jpg');
+    }
+}
+
+@media (min-aspect-ratio: 16/9) and (max-aspect-ratio: 6/16) {
+    .header {
+        background-image: url('thumbs/header-9by16.jpg');
+    }
+}
+
+@media (min-aspect-ratio: 4/3) and (max-aspect-ratio: 16/9) {
+    .header {
+        background-image: url('thumbs/header-4by3.jpg');
+    }
+}
+
+@media (max-aspect-ratio: 4/3) {
+    .header {
+        background-image: url('thumbs/header-3by4.jpg');
+    }
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 576px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+    .image-grid-intro {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 968px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .image-grid-intro {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+}
+
+@media (min-width: 969px) and (max-width: 1292px) {
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1293px) and (max-width: 2560px) {
+    .image-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
