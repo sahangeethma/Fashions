@@ -249,14 +249,14 @@ html {
     position: fixed;
     top: 20px;
     /* left: 20px; */
-    width: 300px;
-    padding: 20px;
+    width: 250px;
+    padding: 20px 0 0 0;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     border-radius: 10px;
     transition: opacity 0.3s ease-in-out;
-    opacity: 0.8; /* Initial opacity */
+    opacity: 0.5; /* Initial opacity */
 }
 
 /* Hover Effect */
@@ -274,23 +274,18 @@ html {
     }
     .floating-intro .image-grid-intro {
         grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
+        gap: 15px;
     }
 }
 
 /* For larger screens */
 @media (min-width: 601px) {
     .floating-intro {
-        position: fixed;
         margin: 10px;
-        padding: 10px;
+        padding: 10px 0 0 0;
         top: 20px;
         left: 20px;
-        width: 450px;
-        z-index: 1000;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        opacity: 0.5;
+        width: 400px;
     }
     .floating-intro .image-grid-intro {
         grid-template-columns: repeat(4, 1fr);
