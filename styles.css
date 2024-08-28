@@ -249,7 +249,7 @@ html {
     position: fixed;
     top: 20px;
     /* left: 20px; */
-    width: 400px;
+    width: 300px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -268,8 +268,8 @@ html {
 @media (max-width: 600px) {
     .floating-intro {
         top: 10px;
-        /* left: 10px; */
-        width: calc(100% - 20px);
+        left: 10px;
+        width: calc(75%);
         padding: 10px;
     }
     .floating-intro .image-grid-intro {
