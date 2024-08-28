@@ -6,18 +6,10 @@ function changeGallery(galleryNumber, selectedItem) {
   let count = [0, 29, 28, 34, 41];
 
   // Create image paths dynamically based on the gallery number
-  // for (let i = 1; i <= count[galleryNumber]; i++) {
-  //   // Assuming 60 images per gallery
-  //   images.push(
-  //     `thumbs/garment${galleryNumber}/garment${galleryNumber}-${i}.jpg`
-  //   );
-  // }
-
   for (let i = 1; i <= count[galleryNumber]; i++) {
     let imagePath = `thumbs/garment${galleryNumber}/garment${galleryNumber}-${String(
       i
     ).padStart(3, "0")}.jpg`;
-    console.log(imagePath); // Debugging line to check the generated paths
     images.push(imagePath);
   }
 
@@ -35,7 +27,8 @@ function changeGallery(galleryNumber, selectedItem) {
 
   // Highlight the selected image item
   const allItems = document.querySelectorAll(
-    ".image-grid-intro .image-item-intro"
+    ".image-grid-intro .image-item-intro",
+    ".floating-intro .image-grid-intro"
   );
   allItems.forEach((item) => {
     item.classList.remove("selected");
@@ -60,4 +53,20 @@ document.getElementById("back-to-intro").addEventListener("click", function () {
   document
     .getElementById("introduction")
     .scrollIntoView({ behavior: "smooth" });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const floatingIntro = document.getElementById("floating-introduction");
+  const serviceSection = document.getElementById("services");
+
+  window.addEventListener("scroll", function () {
+    const rect = serviceSection.getBoundingClientRect();
+
+    // Check if the top of the service section is within the viewport
+    if (rect.top <= 0) {
+      floatingIntro.style.display = "block"; // Show floating div
+    } else {
+      floatingIntro.style.display = "none"; // Hide floating div
+    }
+  });
 });
